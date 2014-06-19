@@ -1,0 +1,27 @@
+<script>
+	var random;
+	var findDifference = function(answer, guess) {
+		if (answer > guess) {
+			return answer - guess;
+		}
+	}
+	
+	var guessingGame = function(answer) {
+		var guess, difference;
+		guess = prompt("What's my number?");
+		difference = findDifference(answer, guess);
+
+		if (guess == answer) {
+			console.log("Dangit, they got me!");
+			return "You Win!"
+		}
+		else {
+			return "Off by: " + difference;
+		}
+	}
+
+	random = Math.floor(Math.random() * 10)
+	for (tries = 1; tries < 4; tries++) {
+		alert(guessingGame(random));
+	}
+</script>

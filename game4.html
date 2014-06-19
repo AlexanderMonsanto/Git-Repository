@@ -1,0 +1,27 @@
+<script>
+	var random;
+	var findDifference = function(answer, guess) {
+		if (answer > guess) {
+			return answer - guess;
+		}
+	}
+	
+	var monthGame = function(answer) {
+		var guess, difference;
+		guess = prompt("What's my number?");
+		difference = findDifference(answer, guess);
+
+		if (guess == answer) {
+			console.log("You Found It");
+			return "Good Job You Got It!"
+		}
+		else {
+			return "Off by: " + difference + " Month(s);
+		}
+	}
+
+	random = Math.floor(Math.random() * 10)
+	for (tries = 1; tries < 4; tries++) {
+		alert(monthGame(random));
+	}
+</script>
