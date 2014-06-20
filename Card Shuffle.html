@@ -1,0 +1,17 @@
+this.shuffle = function() {
+	var copy = [], n = this.cards.length, i, take;
+
+	//While there remain elements to shuffle
+	while (n) {
+
+		//Pick a remaining element..
+		rand = Math.floor(Math.random() * n--);
+
+		//And move it to the new array,
+		take = this.cards.splice(rand, 1)[0]
+		copy.push(take);
+	}
+
+	this.cards = copy; 
+
+}

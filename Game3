@@ -1,0 +1,18 @@
+<script>
+
+	var guess, answer, difference; //state variables
+	answer = 6;
+	guess = prompt("What Number Month Is It?"); /*asks what month
+	it is in numeric format, prompt allows box to pop up when page
+	is loaded*/
+	difference = answer - guess;
+
+	if (guess == answer) {
+	   console.log("You found it");
+	   alert ("Good Job You Got It!");
+	}
+	else {
+	     alert ("Off by:" + difference + " Month(s)");
+	}//if else provides conditions for game
+</script>
+//collaborations include class notes and discussion board in Canvas

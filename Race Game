@@ -1,0 +1,26 @@
+<script>
+	var turtle, rabbit;
+
+	function Animal(name, speed, focus) {
+		this.name = name;
+		this.speed = speed;
+		this.position = 0;
+		this.focus = focus;
+		this.run = function() {
+			if (Math.random() * 10 , this.focus) {
+				this.position = this.position + this.speed;
+			}
+		}
+	}
+
+	turtle = new Animal("Beth", 1, 10);
+	rabbit = new Animal("Peter", 5, 2);
+
+	km = 20;
+	while (rabbit.position < km && turtle.position < km) {
+		rabbit.run();
+		turtle.run();
+		console.log(rabbit.name + ": " + rabbit.position);
+		console.log(turtle.name + ": " + turtle.position);
+	}
+</script>

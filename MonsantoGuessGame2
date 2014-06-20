@@ -1,0 +1,14 @@
+<script>
+	var guess, answer, difference;
+	answer = 6;
+	guess = promt("What Number Month Is It?");
+	difference = answer - guess;
+
+	if (guess == answer) {
+	   console.log("You found it");
+	   alert ("Good Job You Got It!");
+	}
+	else {
+	     alert ("Off by:" + difference + "Month's");
+	}
+<script>
